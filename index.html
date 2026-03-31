@@ -5,87 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONVERGENCE LATTICE</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
         body {
             margin: 0;
             padding: 0;
             font-family: 'Inter', system-ui, sans-serif;
             background: #000000;
             color: #FFFFFF;
-            line-height: 1.6;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 280px;
-            height: 100vh;
-            background: #000000;
-            border-right: 1px solid #222;
-            padding: 40px 30px;
-        }
-        .main {
-            margin-left: 280px;
-            padding: 60px 80px;
-            max-width: 900px;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 900;
-            margin-bottom: 60px;
-            letter-spacing: -1px;
-        }
-        nav a {
-            display: block;
-            color: #FFFFFF;
-            text-decoration: none;
-            font-size: 18px;
-            margin-bottom: 20px;
-            transition: color 0.2s;
-        }
-        nav a:hover {
-            color: #CCCCCC;
-        }
-        h1 {
-            font-size: 68px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-        .subtitle {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 60px;
-            opacity: 0.9;
-        }
-        .btn {
-            display: inline-block;
-            background: #FFFFFF;
-            color: #000000;
-            padding: 16px 32px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 30px;
-            transition: transform 0.2s;
-        }
-        .btn:hover {
-            transform: scale(1.03);
-        }
-        section {
-            margin-bottom: 120px;
-        }
-        h2 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 40px;
-        }
-        .footer {
-            margin-top: 100px;
-            padding-top: 40px;
-            border-top: 1px solid #222;
-            font-size: 14px;
-            opacity: 0.7;
-        }
+        
         .background {
             position: fixed;
             top: 0;
@@ -95,8 +26,103 @@
             background-image: url('radial-wave-stars-bg.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.85;
+            opacity: 0.92;
             z-index: -1;
+            filter: brightness(1.05) contrast(1.1);
+        }
+        
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100vh;
+            background: #000000;
+            border-right: 1px solid #222222;
+            padding: 40px 30px;
+            z-index: 10;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 70px;
+        }
+        
+        nav a {
+            display: block;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            transition: color 0.2s ease;
+        }
+        
+        nav a:hover {
+            color: #CCCCCC;
+        }
+        
+        .main {
+            margin-left: 260px;
+            padding: 80px 90px;
+            max-width: 920px;
+        }
+        
+        h1 {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+        
+        .subtitle {
+            font-size: 26px;
+            font-weight: 600;
+            opacity: 0.95;
+            margin-bottom: 70px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #000000;
+            padding: 18px 36px;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            transform: scale(1.04);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.15);
+        }
+        
+        section {
+            margin-bottom: 140px;
+        }
+        
+        h2 {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+        
+        p {
+            font-size: 19px;
+            max-width: 780px;
+        }
+        
+        .footer {
+            margin-top: 140px;
+            padding-top: 50px;
+            border-top: 1px solid #222222;
+            font-size: 15px;
+            opacity: 0.75;
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -112,7 +138,7 @@
             <a href="#reflections">Reflections</a>
             <a href="#author">Author</a>
         </nav>
-        <a href="https://zenodo.org/records/19325005/files/convergencelattice.pdf" class="btn" style="margin-top: 80px;">Download Paper</a>
+        <a href="https://zenodo.org/records/19325005/files/convergencelattice.pdf" class="btn" style="margin-top: 80px;">Download Paper (15.8 MB)</a>
     </div>
 
     <div class="main">
@@ -124,15 +150,14 @@
             <p>This work presents the Convergence Lattice — a recursive, multi-scale structure that quietly emerges when autonomous agents, programmable value flows, self-serve abstraction layers, and distributed edge hardware begin to interact under the unforgiving constraints of real physics and latency.</p>
             <p>What starts as a messy tangle of overlapping systems — computational, financial, and physical substrates that barely talk to each other — slowly begins to organize itself. Density increases. Patterns repeat across scales. Coordination overhead, that eternal tax on complexity, starts to compress in surprising ways. At certain thresholds the lattice shifts phase: what once felt chaotic suddenly feels almost inevitable.</p>
             <p>Is it possible that adding more agents and more connections doesn’t always make the system harder to run — but, under the right topology, actually makes it easier?</p>
-            <!-- Add the rest of the revised abstract here if you want it longer -->
         </section>
 
         <section id="concepts">
             <h2>Key Concepts</h2>
             <p><strong>Substrate Formation</strong> — The foundational layers that enable autonomous coordination.</p>
-            <p><strong>The Recursive Lattice</strong> — A structure that repeats across scales.</p>
-            <p><strong>Programmable Value Flows</strong> — Value transfer at the speed of computation.</p>
-            <p><strong>Edge Co-Design & Semi-Multiplanetary Topology</strong> — Autonomy as a structural requirement.</p>
+            <p><strong>The Recursive Lattice</strong> — A structure that repeats across scales from individual agent interactions to global coordination patterns.</p>
+            <p><strong>Programmable Value Flows</strong> — Value transfer that operates at the same speed and granularity as computation itself.</p>
+            <p><strong>Edge Co-Design & Semi-Multiplanetary Topology</strong> — Why autonomy stops being an optimization and becomes a structural necessity the moment you leave low-latency Earth.</p>
         </section>
 
         <section id="conjectures">
@@ -147,7 +172,7 @@
 
         <section id="author">
             <h2>About the Author</h2>
-            <p>Martin B. Joseph is an independent researcher exploring the intersection of autonomous systems, distributed coordination, and physical constraints.</p>
+            <p>Martin B. Joseph is an independent researcher exploring the intersection of autonomous systems, distributed coordination, and physical constraints. This work represents 854 days of synthesis — drawing threads from computer science, economics, physics, and systems theory into a coherent framework for understanding emergent coordination structures.</p>
         </section>
 
         <div class="footer">
